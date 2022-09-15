@@ -1,0 +1,40 @@
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input_border_color);
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+input[type=submit]:hover {
+    background-color: var(--btn_submit_hover);
+  }
+input[type=submit] {
+    background-color: var(--btn_submit_color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  
+  }
+
+.col-md-2 .logo{
+  float: right;
+}
+.col-md-8 h1 {
+    text-align: center;
+  }
+.col-md-12 {
+  display: flex;
+  justify-content: center;
+}
+h5 {
+  text-align: center;
+
+}
