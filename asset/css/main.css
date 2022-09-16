@@ -1,10 +1,10 @@
 :root{
     --background_color: #f2f2f2; /* Form Background color */
     /* --background_color: #7d776f; */
-    /* --btn_submit_color: #04AA6D; */
-    --btn_submit_color: #e4a301;
-    --btn_submit_hover: #7e5f11;
-    /* --btn_submit_hover: #45a049; */
+    --btn_submit_color: #04AA6D;
+   /* --btn_submit_color: #e4a301;
+    --btn_submit_hover: #7e5f11; */
+    --btn_submit_hover: #45a049; 
     --input_border_color: #ccc;
     --logo_color: #e4a301;
 }
