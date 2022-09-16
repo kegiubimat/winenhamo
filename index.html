@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="asset/css/main.css">
     <link rel="stylesheet" href="asset/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="icon" href="asset\img\logo_tiemnhamo.jpg" type="image/x-icon">
 </head>
 <body>
 <!-- BẮT ĐẦU CONTAINER -->
-  <div class = "container">
+<div class = "container">
 <!-- HEADER -->
     <div class="row">
         <div class="col-md-2">
@@ -27,14 +30,14 @@
         <div class="col-md-2"></div>
     </div>
 <!-- FORM NHẬP DỮ LIỆU -->
-    <div>
-    <form id="ruou-form" method="POST">
+  <div>
+    <form id="ruou-form" class ="ruou-form" method="POST">
         <div class="row">
             <div class="col-md-3">
               <label>Ngày</label>
             </div>
             <div class="col-md-9">
-              <input type="date" name="ngay" placeholder="Ngày bán"/>
+              <input type="date" name="ngay" class="spdate" tabIndex="1" autofocus placeholder="Ngày bán"/>
             </div>
           </div>
           
@@ -43,7 +46,7 @@
               <label>Họ tên</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="hoten" placeholder="Họ tên"/>
+              <input type="text" name="hoten" tabIndex="2" placeholder="Họ tên"/>
             </div>
           </div>
           
@@ -52,7 +55,7 @@
               <label>Số điện thoại</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="sdt" placeholder="Số điện thoại" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+              <input type="text" name="sdt" tabIndex="3" placeholder="Số điện thoại" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
             </div>
           </div>
           
@@ -61,7 +64,7 @@
               <label>Địa chỉ</label>
             </div>
             <div class="col-md-9">
-              <textarea name="diachi" rows="2" cols="23" placeholder="Địa chỉ"></textarea>
+              <textarea name="diachi" rows="2" cols="23" tabIndex="4" placeholder="Địa chỉ"></textarea>
             </div>
           </div>
       
@@ -70,14 +73,14 @@
               <label>Sản phẩm</label>
             </div>
             <div class="col-md-9">
-              <input list="sanpham" name="sanpham" placeholder="Chọn loại sản phẩm">
+              <input list="sanpham" name="sanpham" class="spinput" tabIndex="5" placeholder="Chọn loại sản phẩm">
                         <datalist id="sanpham">
                             <option value="Rượu dâu">
                             <option value="Rượu mơ">
                             <option value="Rượu cam">
                             <option value="Combo Rượu mơ - hột hạt">
                             <option value="Combo Rượu mơ - lạp sườn">
-                         </datalist>
+                        </datalist>
             </div>
           </div>
           
@@ -86,7 +89,7 @@
               <label>Số lượng</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="soluong" placeholder="Số lượng" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input type="text" name="soluong" tabIndex="6" placeholder="Số lượng" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             </div>
           </div>
           
@@ -95,7 +98,7 @@
               <label>Giá từng sản phẩm</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="giaban" placeholder="Giá từng sản phẩm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input type="text" name="giaban" tabIndex="7" placeholder="Giá từng sản phẩm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             </div>
           </div>
       
@@ -104,7 +107,7 @@
               <label>Phí thu thêm</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="thuthem" placeholder="Phí thu thêm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input type="text" name="thuthem" tabIndex="8" placeholder="Phí thu thêm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             </div>
           </div>
           
@@ -113,7 +116,7 @@
               <label>Phí phát sinh</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="phatsinh" placeholder="Phí chi phát sinh" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input type="text" name="phatsinh" tabIndex="9" placeholder="Phí chi phát sinh" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             </div>
           </div>
           
@@ -122,29 +125,26 @@
               <label>Ghi chú</label>
             </div>
             <div class="col-md-9">
-              <textarea name="ghichu" rows="1" cols="23" placeholder="Ghi chú"></textarea>
+              <textarea name="ghichu" rows="1" cols="23" tabIndex="10" placeholder="Ghi chú"></textarea>
             </div>
           </div>
-          <!-- <div class="row">
-            <div class="col-md-12">
-              <input type="submit" id="submit-form" value="Nhập đơn hàng">
-          </div> -->
-          </div>
         </form>
-    </div>
+  </div>
 <!-- KẾT THÚC FORM NHẬP DỮ LIỆU -->
-
+<!-- BUTTON NHẬP ĐƠN HÀNG -->
 <div class="row">
   <div class="col-md-12">
     <input type="submit" id="submit-form" value="Nhập đơn hàng">
+  </div>
 </div>
-    <br><br><br><br>
+<br><br>
 <!-- BUTTON XEM DANH SÁCH ĐÃ NHẬP -->
     <div class="row">
       <div class="col-md-12">
         <button id="btn_viewlist" onclick=" window.open('https://docs.google.com/spreadsheets/d/116-xLWPtc8FDO7vVNyLEkqeupLSXyb9rMIsHnlROqNo/edit#gid=0','_blank')"> Xem danh sách</button>
       </div>
     </div>
+
 <!-- FOOTER -->
 <div>
     <h5>Code by <span style="color: var(--logo_color)"><b>Tiemnhamo</b></span></h5>
@@ -153,6 +153,21 @@
 </div>
 <!-- KẾT THÚC CONTAINER -->
 
+<!-- SCRIPT ENTER TO NEXT INPUT -->
+<script type="text/javascript">
+  $(document).on('keypress', 'input,select', function (e) {
+      if (e.which == 13) {
+          e.preventDefault();
+          var $next = $('[tabIndex=' + (+this.tabIndex + 1) + ']');
+          console.log($next.length);
+          if (!$next.length) {
+         $next = $('[tabIndex=1]');        }
+          $next.focus() .click();
+      }
+  });
+  </script>
+
+<!-- SCRIPT BUTTON NHẬP ĐƠN HÀNG -->
 <script>
     var $form = $('form#ruou-form'),
             url = 'https://script.google.com/macros/s/AKfycbzVoFBQ9JGdd07ubBbfc43fi_4tvPpPVBPfG69roVeoH6Ji-P0txL4f_YEnb7R77jQG/exec'
@@ -165,10 +180,12 @@
                 dataType: "json",
                 data: $form.serialize()
             }).success(
-                  alert("Đã nhập đơn hàng - Fighting")
+                
+                 alert("Đã nhập đơn hàng - Fighting")
             )
-        })        
-</script>    
+            
+        }) 
+</script>     
  <!-- <script>
   function tinh_doanh_thu() {
    let a = parseFloat(document.getElementById("soluong").value) 
