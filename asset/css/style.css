@@ -4,14 +4,8 @@ input[type=text], select, textarea, .spinput, .spdate {
     border: 1px solid var(--input_border_color);
     border-radius: 4px;
     resize: vertical;
-  }
+    font-size: 18px !important; 
 
-label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-    font-weight: 200;
-    font-size: 1.5rem;
-    text-align: center;
   }
 
 input[type=submit]:hover {
@@ -24,34 +18,48 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  
+    font-size: 16px !important;
   }
+
+input[type=button]:hover {
+    background-color: var(--btn_submit_hover2);
+  }
+input[type=button] {
+    background-color: var(--btn_submit_color2);
+    color: white !important;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: 200;
+  font-size: 1.5rem;
+  text-align: center;
+}
 
 .col-md-2 .logo{
   float: right;
 }
-.col-md-8 h1 {
-    text-align: center;
-  }
-.col-md-12 {
+
+.col-md-12, .col-md-4{
   display: flex;
   justify-content: center;
 }
-h1 {
-  font-size: 34px !important;
-}
-h5 {
-  text-align: center;
 
-}
-
-.spinput {
+.spinput, .spdate {
     width: 300px;
     height: 42px;
-
 }
 
-.spdate{
-  width: 300px;
-  height: 42px;
+#submit-button, #reset-button, #chingoai-button, #xemds-button{
+  min-width: 150px !important;
+  max-width: 150px !important;
+}
+
+#chingoai-button, #xemds-button, #reset-button{
+margin-bottom: 5px;
 }
