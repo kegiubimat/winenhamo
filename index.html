@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +33,7 @@
 <!-- FORM NHẬP DỮ LIỆU -->
   <div>
     <form id="ruou-form" class ="ruou-form" method="POST">
+         <!-- Ngày -->
         <div class="row">
             <div class="col-md-3">
               <label>Ngày</label>
@@ -40,7 +42,7 @@
               <input type="date" name="ngay" class="spdate" tabIndex="1" autofocus placeholder="Ngày bán"/>
             </div>
           </div>
-          
+          <!-- Họ tên -->
           <div class="row">
             <div class="col-md-3">
               <label>Họ tên</label>
@@ -49,7 +51,7 @@
               <input type="text" name="hoten" tabIndex="2" placeholder="Họ tên"/>
             </div>
           </div>
-          
+          <!-- Số điện thoại -->
           <div class="row">
             <div class="col-md-3">
               <label>Số điện thoại</label>
@@ -58,7 +60,7 @@
               <input type="text" name="sdt" tabIndex="3" placeholder="Số điện thoại" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
             </div>
           </div>
-          
+          <!-- Địa chỉ -->
           <div class="row">
             <div class="col-md-3">
               <label>Địa chỉ</label>
@@ -67,7 +69,7 @@
               <textarea name="diachi" rows="2" cols="23" tabIndex="4" placeholder="Địa chỉ"></textarea>
             </div>
           </div>
-      
+          <!-- Sản phẩm -->
           <div class="row">
             <div class="col-md-3">
               <label>Sản phẩm</label>
@@ -83,16 +85,16 @@
                         </datalist>
             </div>
           </div>
-          
+          <!-- Số lượng -->
           <div class="row">
             <div class="col-md-3">
               <label>Số lượng</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="soluong" tabIndex="6" placeholder="Số lượng" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input type="text" name="soluong" id="soluongid" tabIndex="6" placeholder="Số lượng" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             </div>
           </div>
-          
+          <!-- Giá từng sản phẩm -->
           <div class="row">
             <div class="col-md-3">
               <label>Giá từng sản phẩm</label>
@@ -101,7 +103,7 @@
               <input type="text" name="giaban" tabIndex="7" placeholder="Giá từng sản phẩm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             </div>
           </div>
-      
+          <!-- Phí thu thêm -->
           <div class="row">
             <div class="col-md-3">
               <label>Phí thu thêm</label>
@@ -110,7 +112,7 @@
               <input type="text" name="thuthem" tabIndex="8" placeholder="Phí thu thêm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             </div>
           </div>
-          
+          <!-- Phí phát sinh -->
           <div class="row">
             <div class="col-md-3">
               <label>Phí phát sinh</label>
@@ -119,7 +121,7 @@
               <input type="text" name="phatsinh" tabIndex="9" placeholder="Phí chi phát sinh" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             </div>
           </div>
-          
+          <!-- Ghi chú -->
           <div class="row">
             <div class="col-md-3">
               <label>Ghi chú</label>
@@ -134,17 +136,31 @@
 <!-- BUTTON NHẬP ĐƠN HÀNG -->
 <div class="row">
   <div class="col-md-12">
-    <input type="submit" id="submit-form" value="Nhập đơn hàng">
+    <input type="submit" id="submit-button" value="Nhập đơn hàng">
   </div>
 </div>
 <br><br>
-<!-- BUTTON XEM DANH SÁCH ĐÃ NHẬP -->
+<!-- BUTTON RESET FORM NHẬP -->
+<div class="row">
+  <div class="col-md-4">
+    <input type="button" id="chingoai-button" onclick="window.open('https://docs.google.com/spreadsheets/d/116-xLWPtc8FDO7vVNyLEkqeupLSXyb9rMIsHnlROqNo/edit#gid=196496877','_blank')" value="Nhập - Chi ngoài"> 
+  </div>
+  <div class="col-md-4">
+     <!-- <input type="submit" id="reset-button" onclick="resetform()" value="Reset đơn hàng"> -->
+     <input type="submit" id="reset-button" onclick="resetform()" value="Reset Form">
+  </div>
+  <div class="col-md-4">
+    <input type="button" id="xemds-button" onclick="window.open('https://docs.google.com/spreadsheets/d/116-xLWPtc8FDO7vVNyLEkqeupLSXyb9rMIsHnlROqNo/edit#gid=0','_blank')" value="Xem danh sách">
+  </div>
+</div>
+<br><br>
+<!-- BUTTON XEM DANH SÁCH ĐÃ NHẬP 
     <div class="row">
       <div class="col-md-12">
         <button id="btn_viewlist" onclick=" window.open('https://docs.google.com/spreadsheets/d/116-xLWPtc8FDO7vVNyLEkqeupLSXyb9rMIsHnlROqNo/edit#gid=0','_blank')"> Xem danh sách</button>
       </div>
     </div>
-
+-->
 <!-- FOOTER -->
 <div>
     <h5>Code by <span style="color: var(--logo_color)"><b>Tiemnhamo</b></span></h5>
@@ -152,6 +168,12 @@
 
 </div>
 <!-- KẾT THÚC CONTAINER -->
+
+  <script>
+function resetform() {
+  document.getElementById("ruou-form").reset();
+}
+</script>
 
 <!-- SCRIPT ENTER TO NEXT INPUT -->
 <script type="text/javascript">
@@ -172,20 +194,22 @@
     var $form = $('form#ruou-form'),
             url = 'https://script.google.com/macros/s/AKfycbzVoFBQ9JGdd07ubBbfc43fi_4tvPpPVBPfG69roVeoH6Ji-P0txL4f_YEnb7R77jQG/exec'
 
-        $('#submit-form').on('click', function(e) {
+        $('#submit-button').on('click', function(e) {
               e.preventDefault();
-            var jqxhr = $.ajax({
+            var jqxhr = $.ajax
+            ({
                 url: url,
                 method: "POST",
                 dataType: "json",
                 data: $form.serialize()
-            }).success(
-                
+            })
+            .success(            
                  alert("Đã nhập đơn hàng - Fighting")
             )
-            
-        }) 
+            }) 
 </script>     
+
+</script>
  <!-- <script>
   function tinh_doanh_thu() {
    let a = parseFloat(document.getElementById("soluong").value) 
@@ -199,3 +223,4 @@
   </script> -->
 </body>
 </html>
+
