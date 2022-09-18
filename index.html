@@ -203,8 +203,9 @@ function resetform() {
                 dataType: "json",
                 data: $form.serialize()
             })
-            .success(            
-                 alert("Đã nhập đơn hàng - Fighting")
+            .success(      
+                resetform(),     
+                alert("Đã nhập đơn hàng - Fighting")
             )
             }) 
 </script>     
