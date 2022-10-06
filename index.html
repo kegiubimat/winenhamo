@@ -48,7 +48,7 @@
               <label>Họ tên</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="hoten" tabIndex="2" placeholder="Họ tên"/>
+              <input type="text" name="hoten" id = "hotenid" tabIndex="2" placeholder="Họ tên"/>
             </div>
           </div>
           <!-- Số điện thoại -->
@@ -75,13 +75,15 @@
               <label>Sản phẩm</label>
             </div>
             <div class="col-md-9">
-              <input list="sanpham" name="sanpham" class="spinput" tabIndex="5" placeholder="Chọn loại sản phẩm">
+              <input list="sanpham" name="sanpham" class="spinput" tabIndex="5" placeholder="Chọn loại sản phẩm" autocomplete="off">
                         <datalist id="sanpham">
+                            <option value="Rượu Mơ lùn">
                             <option value="Rượu Mơ 14 cao">
-                            <option value="Rượu Mơ 23">
-                            <option value="Rượu Mơ lùn 370">
-                            <option value="Rượu mận">
-                            <option value="Combo Rượu - Quà">
+                            <option value="Rượu Mơ 23 cao">
+                            <option value="Rượu Mận cao">
+                            <option value="Rượu Mận lùn">
+                            <option value="Rượu Dâu tằm">
+                            <option value="Set rượu">
                         </datalist>
             </div>
           </div>
@@ -100,7 +102,7 @@
               <label>Giá từng sản phẩm</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="giaban" tabIndex="7" placeholder="Giá từng sản phẩm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input type="text" name="giaban" id="giaid" tabIndex="7" placeholder="Giá từng sản phẩm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             </div>
           </div>
           <!-- Phí thu thêm -->
@@ -109,7 +111,7 @@
               <label>Phí thu thêm</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="thuthem" tabIndex="8" placeholder="Phí thu thêm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input type="text" name="thuthem" id="thuthemid" tabIndex="8" placeholder="Phí thu thêm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             </div>
           </div>
           <!-- Phí phát sinh -->
@@ -118,7 +120,16 @@
               <label>Phí phát sinh</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="phatsinh" tabIndex="9" placeholder="Phí chi phát sinh" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input type="text" name="phatsinh" id="phatsinhid" tabIndex="9" placeholder="Phí chi phát sinh" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <label>Doanh thu</label>
+            </div>
+            <div class="col-md-9">
+              <label id = "doanhthuid"> </label>
             </div>
           </div>
           <!-- Ghi chú -->
@@ -168,8 +179,27 @@
 </div>
 <!-- KẾT THÚC CONTAINER -->
 
-  <script>
-function resetform() {
+<!-- <script>
+  let htenid = document.getElementById('soluongid');
+  console.log(htenid.value);
+  function tinhDoanhthu() {
+    var sluong = parseFloat(document.getElementById("soluongid"));
+    console.log(sluong);
+    var gban = parseFloat(document.getElementById("giaid").value);
+    var tthem = parseFloat(document.getElementById("thuthemid").value);
+    var psinh = parseFloat(document.getElementById("phatsinhid").value);
+
+    var dthu = sluong  *  gban + tthem - psinh;
+
+    
+        document.getElementById("doanhthuid").innerHTML = dthu;
+        // console.log(dthu);
+       
+    
+}
+  </script>  -->
+<script>
+    function resetform() {
   document.getElementById("ruou-form").reset();
 }
 </script>
@@ -186,7 +216,7 @@ function resetform() {
           $next.focus() .click();
       }
   });
-  </script>
+</script>
 
 <!-- SCRIPT BUTTON NHẬP ĐƠN HÀNG -->
 <script>
@@ -209,18 +239,7 @@ function resetform() {
             }) 
 </script>     
 
-</script>
- <!-- <script>
-  function tinh_doanh_thu() {
-   let a = parseFloat(document.getElementById("soluong").value) 
-   let b = parseFloat(document.getElementById("giaban").value)
-   let c = parseFloat(document.getElementById("thuthem").value) 
-   let d = parseFloat(document.getElementById("phatsinh").value) 
-   
-   document.getElementById("doanhthu").value = a*b+c-d;
-  
-  }
-  </script> -->
+
 </body>
 </html>
 
