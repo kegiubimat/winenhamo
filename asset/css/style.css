@@ -1,4 +1,5 @@
 input[type="text"],
+input[type="number"],
 select,
 textarea,
 .spinput,
@@ -57,6 +58,15 @@ label {
 .col-md-6 {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+#h1donhang,
+#rowdonhang,
+#btnds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .spinput,
@@ -66,7 +76,6 @@ label {
 }
 
 #submit-button,
-#reset-button,
 #chingoai-button,
 #xemds-button {
   min-width: 150px !important;
@@ -74,7 +83,8 @@ label {
 }
 
 #chingoai-button,
-#xemds-button,
-#reset-button {
+#xemds-button {
   margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
