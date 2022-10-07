@@ -1,45 +1,61 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Nhập dữ liệu - WINE NHÀ MƠ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="asset/css/main.css">
-    <link rel="stylesheet" href="asset/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="icon" href="asset\img\logo_tiemnhamo.jpg" type="image/x-icon">
-</head>
-<body>
-<!-- BẮT ĐẦU CONTAINER -->
-<div class = "container">
-<!-- HEADER -->
-    <div class="row">
+    <link rel="stylesheet" href="asset/css/main.css" />
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="asset\img\logo_tiemnhamo.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- BẮT ĐẦU CONTAINER -->
+    <div class="container">
+      <!-- HEADER -->
+      <div class="row">
         <div class="col-md-2">
-          <img class = "logo" src="asset\img\logo_tiemnhamo.jpg" alt="Logo Tiệm nhà Mơ" width="100" height="100" />
+          <img
+            class="logo"
+            src="asset\img\logo_tiemnhamo.jpg"
+            alt="Logo Tiệm nhà Mơ"
+            width="100"
+            height="100"
+          />
         </div>
         <div class="col-md-8">
           <h1><b>NHẬP ĐƠN HÀNG - RƯỢU NHÀ MƠ</b></h1>
         </div>
         <div class="col-md-2"></div>
-    </div>
-<!-- FORM NHẬP DỮ LIỆU -->
-  <div>
-    <form id="ruou-form" class ="ruou-form" method="POST">
-         <!-- Ngày -->
-        <div class="row">
+      </div>
+      <!-- FORM NHẬP DỮ LIỆU -->
+      <div>
+        <form id="ruou-form" class="ruou-form" method="POST">
+          <!-- Ngày -->
+          <div class="row">
             <div class="col-md-3">
               <label>Ngày</label>
             </div>
             <div class="col-md-9">
-              <input type="date" name="ngay" class="spdate" tabIndex="1" autofocus placeholder="Ngày bán"/>
+              <input
+                type="date"
+                name="ngay"
+                class="spdate"
+                tabindex="1"
+                autofocus
+                placeholder="Ngày bán"
+              />
             </div>
           </div>
           <!-- Họ tên -->
@@ -48,7 +64,13 @@
               <label>Họ tên</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="hoten" id = "hotenid" tabIndex="2" placeholder="Họ tên"/>
+              <input
+                type="text"
+                name="hoten"
+                id="hotenid"
+                tabindex="2"
+                placeholder="Họ tên"
+              />
             </div>
           </div>
           <!-- Số điện thoại -->
@@ -57,7 +79,13 @@
               <label>Số điện thoại</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="sdt" tabIndex="3" placeholder="Số điện thoại" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+              <input
+                type="text"
+                name="sdt"
+                tabindex="3"
+                placeholder="Số điện thoại"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+              />
             </div>
           </div>
           <!-- Địa chỉ -->
@@ -66,7 +94,13 @@
               <label>Địa chỉ</label>
             </div>
             <div class="col-md-9">
-              <textarea name="diachi" rows="2" cols="23" tabIndex="4" placeholder="Địa chỉ"></textarea>
+              <textarea
+                name="diachi"
+                rows="2"
+                cols="23"
+                tabindex="4"
+                placeholder="Địa chỉ"
+              ></textarea>
             </div>
           </div>
           <!-- Sản phẩm -->
@@ -75,16 +109,23 @@
               <label>Sản phẩm</label>
             </div>
             <div class="col-md-9">
-              <input list="sanpham" name="sanpham" class="spinput" tabIndex="5" placeholder="Chọn loại sản phẩm" autocomplete="off">
-                        <datalist id="sanpham">
-                            <option value="Rượu Mơ lùn">
-                            <option value="Rượu Mơ 14 cao">
-                            <option value="Rượu Mơ 23 cao">
-                            <option value="Rượu Mận cao">
-                            <option value="Rượu Mận lùn">
-                            <option value="Rượu Dâu tằm">
-                            <option value="Set rượu">
-                        </datalist>
+              <input
+                list="sanpham"
+                name="sanpham"
+                class="spinput"
+                tabindex="5"
+                placeholder="Chọn loại sản phẩm"
+                autocomplete="off"
+              />
+              <datalist id="sanpham">
+                <option value="Rượu Mơ lùn"></option>
+                <option value="Rượu Mơ 14 cao"></option>
+                <option value="Rượu Mơ 23 cao"></option>
+                <option value="Rượu Mận cao"></option>
+                <option value="Rượu Mận lùn"></option>
+                <option value="Rượu Dâu tằm"></option>
+                <option value="Set rượu"></option>
+              </datalist>
             </div>
           </div>
           <!-- Số lượng -->
@@ -93,7 +134,14 @@
               <label>Số lượng</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="soluong" id="soluongid" tabIndex="6" placeholder="Số lượng" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input
+                type="text"
+                name="soluong"
+                id="soluongid"
+                tabindex="6"
+                placeholder="Số lượng"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+              />
             </div>
           </div>
           <!-- Giá từng sản phẩm -->
@@ -102,7 +150,14 @@
               <label>Giá từng sản phẩm</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="giaban" id="giaid" tabIndex="7" placeholder="Giá từng sản phẩm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input
+                type="text"
+                name="giaban"
+                id="giaid"
+                tabindex="7"
+                placeholder="Giá từng sản phẩm"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+              />
             </div>
           </div>
           <!-- Phí thu thêm -->
@@ -111,7 +166,14 @@
               <label>Phí thu thêm</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="thuthem" id="thuthemid" tabIndex="8" placeholder="Phí thu thêm" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input
+                type="text"
+                name="thuthem"
+                id="thuthemid"
+                tabindex="8"
+                placeholder="Phí thu thêm"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+              />
             </div>
           </div>
           <!-- Phí phát sinh -->
@@ -120,126 +182,117 @@
               <label>Phí phát sinh</label>
             </div>
             <div class="col-md-9">
-              <input type="text" name="phatsinh" id="phatsinhid" tabIndex="9" placeholder="Phí chi phát sinh" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+              <input
+                type="text"
+                name="phatsinh"
+                id="phatsinhid"
+                tabindex="9"
+                placeholder="Phí chi phát sinh"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+              />
             </div>
           </div>
-
+          <!-- Doanh thu
           <div class="row">
             <div class="col-md-3">
               <label>Doanh thu</label>
             </div>
             <div class="col-md-9">
-              <label id = "doanhthuid"> </label>
+              <label id="doanhthuid"> </label>
             </div>
-          </div>
+          </div> -->
           <!-- Ghi chú -->
           <div class="row">
             <div class="col-md-3">
               <label>Ghi chú</label>
             </div>
             <div class="col-md-9">
-              <textarea name="ghichu" rows="1" cols="23" tabIndex="10" placeholder="Ghi chú"></textarea>
+              <textarea
+                name="ghichu"
+                rows="1"
+                cols="23"
+                tabindex="10"
+                placeholder="Ghi chú"
+              ></textarea>
             </div>
           </div>
         </form>
-  </div>
-<!-- KẾT THÚC FORM NHẬP DỮ LIỆU -->
-<!-- BUTTON NHẬP ĐƠN HÀNG -->
-<div class="row">
-  <div class="col-md-12">
-    <input type="submit" id="submit-button" value="Nhập đơn hàng">
-  </div>
-</div>
-<br><br>
-<!-- BUTTON RESET FORM NHẬP -->
-<div class="row">
-  <div class="col-md-6">
-    <input type="button" id="chingoai-button" onclick="window.open('https://docs.google.com/spreadsheets/d/116-xLWPtc8FDO7vVNyLEkqeupLSXyb9rMIsHnlROqNo/edit#gid=196496877','_blank')" value="Nhập - Chi ngoài"> 
-  </div>
-  <!-- <div class="col-md-4">
-     <input type="submit" id="reset-button" onclick="resetform()" value="Reset Form">
-  </div> -->
-  <div class="col-md-6">
-    <input type="button" id="xemds-button" onclick="window.open('https://docs.google.com/spreadsheets/d/116-xLWPtc8FDO7vVNyLEkqeupLSXyb9rMIsHnlROqNo/edit#gid=0','_blank')" value="Xem danh sách">
-  </div>
-</div>
-<br><br>
-<!-- BUTTON XEM DANH SÁCH ĐÃ NHẬP 
-    <div class="row">
-      <div class="col-md-12">
-        <button id="btn_viewlist" onclick=" window.open('https://docs.google.com/spreadsheets/d/116-xLWPtc8FDO7vVNyLEkqeupLSXyb9rMIsHnlROqNo/edit#gid=0','_blank')"> Xem danh sách</button>
+      </div>
+      <!-- KẾT THÚC FORM NHẬP DỮ LIỆU -->
+      <!-- BUTTON NHẬP ĐƠN HÀNG -->
+      <div class="row">
+        <div class="col-md-12">
+          <input type="submit" id="submit-button" value="Nhập đơn hàng" />
+        </div>
+      </div>
+      <br /><br />
+      <!-- BUTTON RESET FORM NHẬP -->
+      <div class="row">
+        <div class="col-md-6">
+          <input
+            type="button"
+            id="chingoai-button"
+            onclick="window.open('https://docs.google.com/spreadsheets/d/116-xLWPtc8FDO7vVNyLEkqeupLSXyb9rMIsHnlROqNo/edit#gid=196496877','_blank')"
+            value="Nhập - Chi ngoài"
+          />
+        </div>
+
+        <div class="col-md-6">
+          <input
+            type="button"
+            id="xemds-button"
+            onclick="window.open('https://docs.google.com/spreadsheets/d/116-xLWPtc8FDO7vVNyLEkqeupLSXyb9rMIsHnlROqNo/edit#gid=0','_blank')"
+            value="Xem danh sách"
+          />
+        </div>
+      </div>
+      <br /><br />
+
+      <!-- FOOTER -->
+      <div>
+        <h5>
+          Code by <span style="color: var(--logo_color)"><b>Tiemnhamo</b></span>
+        </h5>
       </div>
     </div>
--->
-<!-- FOOTER -->
-<div>
-    <h5>Code by <span style="color: var(--logo_color)"><b>Tiemnhamo</b></span></h5>
-</div>
+    <!-- KẾT THÚC CONTAINER -->
 
-</div>
-<!-- KẾT THÚC CONTAINER -->
+    <script>
+      function resetform() {
+        document.getElementById("ruou-form").reset();
+      }
+    </script>
 
-<!-- <script>
-  let htenid = document.getElementById('soluongid');
-  console.log(htenid.value);
-  function tinhDoanhthu() {
-    var sluong = parseFloat(document.getElementById("soluongid"));
-    console.log(sluong);
-    var gban = parseFloat(document.getElementById("giaid").value);
-    var tthem = parseFloat(document.getElementById("thuthemid").value);
-    var psinh = parseFloat(document.getElementById("phatsinhid").value);
-
-    var dthu = sluong  *  gban + tthem - psinh;
-
-    
-        document.getElementById("doanhthuid").innerHTML = dthu;
-        // console.log(dthu);
-       
-    
-}
-  </script>  -->
-<script>
-    function resetform() {
-  document.getElementById("ruou-form").reset();
-}
-</script>
-
-<!-- SCRIPT ENTER TO NEXT INPUT -->
-<script type="text/javascript">
-  $(document).on('keypress', 'input,select', function (e) {
-      if (e.which == 13) {
+    <!-- SCRIPT ENTER TO NEXT INPUT -->
+    <script type="text/javascript">
+      $(document).on("keypress", "input,select", function (e) {
+        if (e.which == 13) {
           e.preventDefault();
-          var $next = $('[tabIndex=' + (+this.tabIndex + 1) + ']');
+          var $next = $("[tabIndex=" + (+this.tabIndex + 1) + "]");
           console.log($next.length);
           if (!$next.length) {
-         $next = $('[tabIndex=1]');        }
-          $next.focus() .click();
-      }
-  });
-</script>
+            $next = $("[tabIndex=1]");
+          }
+          $next.focus().click();
+        }
+      });
+    </script>
 
-<!-- SCRIPT BUTTON NHẬP ĐƠN HÀNG -->
-<script>
-    var $form = $('form#ruou-form'),
-            url = 'https://script.google.com/macros/s/AKfycbzVoFBQ9JGdd07ubBbfc43fi_4tvPpPVBPfG69roVeoH6Ji-P0txL4f_YEnb7R77jQG/exec'
+    <!-- SCRIPT BUTTON NHẬP ĐƠN HÀNG -->
+    <script>
+      var $form = $("form#ruou-form"),
+        url =
+          "https://script.google.com/macros/s/AKfycbzVoFBQ9JGdd07ubBbfc43fi_4tvPpPVBPfG69roVeoH6Ji-P0txL4f_YEnb7R77jQG/exec";
 
-        $('#submit-button').on('click', function(e) {
-              e.preventDefault();
-            var jqxhr = $.ajax
-            ({
-                url: url,
-                method: "POST",
-                dataType: "json",
-                data: $form.serialize()
-            })
-            .success(      
-                resetform(),     
-                alert("Đã nhập đơn hàng - Fighting")
-            )
-            }) 
-</script>     
-
-
-</body>
+      $("#submit-button").on("click", function (e) {
+        e.preventDefault();
+        var jqxhr = $.ajax({
+          url: url,
+          method: "POST",
+          dataType: "json",
+          data: $form.serialize(),
+        }).success(resetform(), alert("Đã nhập đơn hàng - Fighting"));
+      });
+    </script>
+  </body>
 </html>
-
